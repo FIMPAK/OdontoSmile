@@ -1,0 +1,16 @@
+{% extends "base_generica.html" %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<div class="tela-login">
+    <div class="texto">
+        <h1>Login</h1>
+    </div>
+    <input type="text" placeholder="Nome">
+    <br><br>
+    <input type="password" placeholder="Senha">
+    <br><br>
+    <button>Entrar</button>
+</div>
+{% endblock %}
