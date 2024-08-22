@@ -1,0 +1,46 @@
+{% extends "base_generica.html" %}
+
+{% block content %}
+{% load static %}
+{% load custom_tags %}
+
+<link rel="stylesheet" href="{% static 'css/style-cld.css' %}">
+<div class="calendario">
+    <h1>Calendário de Agosto 2024</h1>
+    <div class="table-content">
+        <table class="tabela">
+            <thead>
+                <tr class="tr">
+                    <th class="th">Dom</th>
+                    <th class="th">Seg</th>
+                    <th class="th">Ter</th>
+                    <th class="th">Qua</th>
+                    <th class="th">Qui</th>
+                    <th class="th">Sex</th>
+                    <th class="th">Sáb</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for semana in semanas %}
+                <tr>
+                    {% for dia in semana %}
+                    <td class="{% if consultas_por_dia|get_item:dia %}dia-com-consulta{% endif %}">
+                        {{ dia.day }}
+                        <br>
+                        {% if consultas_por_dia|get_item:dia %}    
+                            <a class="op" href="{% url 'detalhes' %}">Consulta</a>  
+                        
+                        {% endif %}                   
+                    </td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="barra"><center class="cor">Odonto Smile</center></div>
+<script src="{% static 'js/script.js' %}"></script>
+
+{% endblock %}

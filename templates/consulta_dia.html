@@ -1,0 +1,93 @@
+{% extends "base_generica.html" %}
+
+{% block content %}
+
+    <style>
+        .table-content{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        table {
+            width: 70%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            height: 100px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        td {
+            background-color: #f9f9f9;
+        }
+    </style>
+    <h1>Agenda de Pacientes</h1>
+    <div class="table-content">
+        <table>
+            <thead>
+                <tr>
+                    <th>Horário</th>
+                    <th>Paciente</th>
+                    <th>Médico</th>
+                    <th>Serviço</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>08:00</td>
+                    <td>João da Silva</td>
+                    <td>Dr. Pedro Almeida</td>
+                    <td>Consulta Geral</td>
+                </tr>
+                <tr>
+                    <td>09:00</td>
+                    <td>Maria Oliveira</td>
+                    <td>Dr. Ana Santos</td>
+                    <td>Exame de Sangue</td>
+                </tr>
+                <tr>
+                    <td>10:00</td>
+                    <td>Carlos Souza</td>
+                    <td>Dr. João Pereira</td>
+                    <td>Consulta Especializada</td>
+                </tr>
+                <tr>
+                    <td>11:00</td>
+                    <td>Fernanda Lima</td>
+                    <td>Dr. Marta Costa</td>
+                    <td>Retorno</td>
+                </tr>
+                <tr>
+                    <td>14:00</td>
+                    <td>Lucas Fernandes</td>
+                    <td>Dr. Renato Martins</td>
+                    <td>Consulta Geral</td>
+                </tr>
+                <tr>
+                    <td>15:00</td>
+                    <td>Patrícia Silva</td>
+                    <td>Dr. Isabel Castro</td>
+                    <td>Exame de Imagem</td>
+                </tr>
+                <tr>
+                    <td>16:00</td>
+                    <td>Ricardo Almeida</td>
+                    <td>Dr. Cláudio Lima</td>
+                    <td>Consulta Especializada</td>
+                </tr>
+                <tr>
+                    <td>17:00</td>
+                    <td>Juliana Costa</td>
+                    <td>Dr. Sandra Lima</td>
+                    <td>Retorno</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+{% endblock %}
